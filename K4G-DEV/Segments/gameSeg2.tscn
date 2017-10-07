@@ -1,0 +1,32 @@
+[gd_scene load_steps=7 format=1]
+
+[ext_resource path="res://Segments/gameSeg2.gd" type="Script" id=1]
+[ext_resource path="res://Scenes/Scene2/k4g_scene2.scn" type="PackedScene" id=2]
+[ext_resource path="res://Scenes/Character1/characterBody.tscn" type="PackedScene" id=3]
+[ext_resource path="res://Scenes/Comment/gameCtrl.tscn" type="PackedScene" id=4]
+[ext_resource path="res://Scenes/Character1/characterCtrl.tscn" type="PackedScene" id=5]
+[ext_resource path="res://Scenes/Gem/gem.scn" type="PackedScene" id=6]
+
+[node name="gameSeg2" type="Node"]
+
+script/script = ExtResource( 1 )
+
+[node name="k4g_scene2" parent="." instance=ExtResource( 2 )]
+
+[node name="characterBody" parent="." instance=ExtResource( 3 )]
+
+transform/local = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 3.5, 0 )
+
+[node name="gameCtrl" parent="." instance=ExtResource( 4 )]
+
+start = true
+waitTime = 60
+
+[node name="characterCtrl" parent="." instance=ExtResource( 5 )]
+
+[node name="gem" parent="." instance=ExtResource( 6 )]
+
+transform/local = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 10, 0 )
+mode = 1
+
+
